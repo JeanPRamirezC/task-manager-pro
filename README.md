@@ -30,10 +30,10 @@ cd task-manager-pro
 ```bash
 npm install
 ```
-
 3. Crea un archivo .env:
+```bash
 DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@YOUR_HOST.supabase.co:5432/postgres
- 
+ ```
  4. Ejecuta migraciones:
  ```bash
  npx drizzle-kit push:pg
