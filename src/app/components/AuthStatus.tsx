@@ -5,7 +5,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 export function AuthStatus() {
   const { data: session, status } = useSession();
 
-  if (status === 'loading') return <p className="text-gray-500">Cargando sesión...</p>;
+  if (status === 'loading') return <p className="text-gray-500">Loading session...</p>;
 
   if (!session) {
     return (
@@ -13,7 +13,7 @@ export function AuthStatus() {
         onClick={() => signIn()}
         className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 text-sm"
       >
-        Iniciar sesión
+        Log in
       </button>
     );
   }
@@ -25,7 +25,7 @@ export function AuthStatus() {
         onClick={() => signOut()}
         className="text-red-500 hover:text-red-700 text-sm"
       >
-        Cerrar sesión
+        Log out
       </button>
     </div>
   );
